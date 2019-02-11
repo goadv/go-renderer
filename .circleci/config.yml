@@ -6,6 +6,9 @@ jobs:
       - image: circleci/golang:1.11.5
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "24:48:12:46:8d:d1:6a:e6:8a:d7:16:93:28:22:aa:78"
       - run: echo 127.0.0.1 devhost | sudo tee -a /etc/hosts
       - run: go vet ./...
       - run: go test ./...
