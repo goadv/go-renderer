@@ -5,8 +5,3 @@ jobs:
       - image: circleci/golang:1.11.5
     steps:
       - checkout
-workflows:
-  version: 2
-  workflow:
-    jobs:
-    - build
